@@ -1,0 +1,16 @@
+C:\Users\mjhon\OneDrive\Documentos\SharpDevelop Projects\Shmup Game\shmup_game\bin\Debug\shmup_game.exe.config
+C:\Users\mjhon\OneDrive\Documentos\SharpDevelop Projects\Shmup Game\shmup_game\bin\Debug\shmup_game.exe
+C:\Users\mjhon\OneDrive\Documentos\SharpDevelop Projects\Shmup Game\shmup_game\bin\Debug\shmup_game.pdb
+C:\Users\mjhon\OneDrive\Documentos\SharpDevelop Projects\Shmup Game\shmup_game\obj\Debug\shmup_game.csprojResolveAssemblyReference.cache
+C:\Users\mjhon\OneDrive\Documentos\SharpDevelop Projects\Shmup Game\shmup_game\obj\Debug\shmup_game.MainForm.resources
+C:\Users\mjhon\OneDrive\Documentos\SharpDevelop Projects\Shmup Game\shmup_game\obj\Debug\shmup_game.csproj.GenerateResource.Cache
+C:\Users\mjhon\OneDrive\Documentos\SharpDevelop Projects\Shmup Game\shmup_game\obj\Debug\shmup_game.exe
+C:\Users\mjhon\OneDrive\Documentos\SharpDevelop Projects\Shmup Game\shmup_game\obj\Debug\shmup_game.pdb
+C:\Users\mjhon\OneDrive\Área de Trabalho\Projetos\C#\Shmup-Game-CSharp\Shmup Game\shmup_game\bin\Debug\shmup_game.exe.config
+C:\Users\mjhon\OneDrive\Área de Trabalho\Projetos\C#\Shmup-Game-CSharp\Shmup Game\shmup_game\bin\Debug\shmup_game.exe
+C:\Users\mjhon\OneDrive\Área de Trabalho\Projetos\C#\Shmup-Game-CSharp\Shmup Game\shmup_game\bin\Debug\shmup_game.pdb
+C:\Users\mjhon\OneDrive\Área de Trabalho\Projetos\C#\Shmup-Game-CSharp\Shmup Game\shmup_game\obj\Debug\shmup_game.csprojResolveAssemblyReference.cache
+C:\Users\mjhon\OneDrive\Área de Trabalho\Projetos\C#\Shmup-Game-CSharp\Shmup Game\shmup_game\obj\Debug\shmup_game.MainForm.resources
+C:\Users\mjhon\OneDrive\Área de Trabalho\Projetos\C#\Shmup-Game-CSharp\Shmup Game\shmup_game\obj\Debug\shmup_game.csproj.GenerateResource.Cache
+C:\Users\mjhon\OneDrive\Área de Trabalho\Projetos\C#\Shmup-Game-CSharp\Shmup Game\shmup_game\obj\Debug\shmup_game.exe
+C:\Users\mjhon\OneDrive\Área de Trabalho\Projetos\C#\Shmup-Game-CSharp\Shmup Game\shmup_game\obj\Debug\shmup_game.pdb
