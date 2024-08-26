@@ -1,12 +1,4 @@
-﻿/*
- * Created by SharpDevelop.
- * User: mjhon
- * Date: 24/08/2024
- * Time: 18:20
- * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
- */
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
@@ -20,10 +12,21 @@ namespace shmup_game
 			InitializeComponent();
 		}
 		
+		PictureBox space_pic = new PictureBox();
+		Random rnd = new Random();
+		
 		void MainFormLoad(object sender, EventArgs e)
 		{
 			this.FormBorderStyle = FormBorderStyle.FixedSingle;
 			this.MaximizeBox = false; this.BackColor = Color.Black;
+			this.BackgroundImage = new Bitmap("space.gif");
+			
+			space_pic.Size = new Size(this.Width / 3, this.Height / 3);
+			space_pic.Location = new Point(this.Width / 3, 50);
+			space_pic.BackColor = Color.Transparent;
+			space_pic.SizeMode = PictureBoxSizeMode.StretchImage;
+			space_pic.Load("battleship.png");
+			space_pic.Parent = this;
 		}
 	}
 }
