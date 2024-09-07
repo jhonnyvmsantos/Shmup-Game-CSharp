@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace shmup_game
@@ -9,8 +10,8 @@ namespace shmup_game
 		{
 			SizeMode = PictureBoxSizeMode.StretchImage;
 			BackColor = Color.Transparent;
-			Height = 100;
-			Width = 100;
+			Height = 50;
+			Width = 50;
 		}
 		
 		public int life_points = 1;

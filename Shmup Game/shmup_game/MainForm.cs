@@ -12,9 +12,10 @@ namespace shmup_game
 			InitializeComponent();
 		}
 		
-		Bitmap space_background = new Bitmap("space.png");
 		PictureBox space_pic = new PictureBox();
 		Random rnd = new Random();
+		
+		public Hero hero = new Hero();
 		
 		string[] main_btn_text = new string[]
 		{
@@ -25,7 +26,7 @@ namespace shmup_game
 		{
 			this.FormBorderStyle = FormBorderStyle.FixedSingle;
 			this.MaximizeBox = false; this.BackColor = Color.Black;
-			this.BackgroundImage = space_background;
+			this.BackgroundImage = new Bitmap("space.png");
 			this.KeyDown += MainFormKeyDown;
 			
 			space_pic.Size = new Size(this.Width / 3, this.Height / 3);
@@ -44,7 +45,7 @@ namespace shmup_game
 				btn.Location = new Point(this.Width / 2 - 125, 350 + (80 * i + 1));
 				btn.Text = main_btn_text[i].ToUpper(); btn.ForeColor = Color.White;
 				btn.Font = new Font(FontFamily.GenericMonospace, 16f);
-				btn.BackgroundImage = space_background;
+				btn.BackgroundImage = new Bitmap("space.png");;
 				btn.Size = new Size(250, 50);
 				btn.Click += MainButtonClick;
 				btn.Parent = this;
@@ -73,6 +74,9 @@ namespace shmup_game
 							control.Visible = false; control.Enabled = false;
 						}
 					}
+					
+					hero.Location = new Point(this.Width / 2 - 32, this.Height - 200);
+					hero.Parent = this;
 					break;
 					
 				case "----":
