@@ -82,6 +82,7 @@ namespace shmup_game
 					
 					mob.Location = new Point(this.Width / 2 - 32, 50);
 					mob.Parent = this;
+					mob.mtimer.Start();
 					break;
 					
 				case "----":

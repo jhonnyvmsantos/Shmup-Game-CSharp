@@ -8,7 +8,7 @@ namespace shmup_game
 		public Hero()
 		{
 			Load("battleship.png");
-			speed = 7;
+			speed = 10;
 			life_points = 3;
 			power = 2;
 			cooldown = 75;
