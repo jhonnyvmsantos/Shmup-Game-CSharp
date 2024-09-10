@@ -16,6 +16,7 @@ namespace shmup_game
 		Random rnd = new Random();
 		
 		public Hero hero = new Hero();
+		public Mob mob = new Mob();
 		
 		string[] main_btn_text = new string[]
 		{
@@ -27,6 +28,7 @@ namespace shmup_game
 			this.FormBorderStyle = FormBorderStyle.FixedSingle;
 			this.MaximizeBox = false; this.BackColor = Color.Black;
 			this.BackgroundImage = new Bitmap("space.png");
+			this.KeyPreview = true;
 			this.KeyDown += MainFormKeyDown;
 			
 			space_pic.Size = new Size(this.Width / 3, this.Height / 3);
@@ -75,8 +77,11 @@ namespace shmup_game
 						}
 					}
 					
-					hero.Location = new Point(this.Width / 2 - 32, this.Height - 200);
+					hero.Location = new Point(this.Width / 2 - 32, this.Height - 150);
 					hero.Parent = this;
+					
+					mob.Location = new Point(this.Width / 2 - 32, 50);
+					mob.Parent = this;
 					break;
 					
 				case "----":
@@ -90,7 +95,25 @@ namespace shmup_game
 		
 		void MainFormKeyDown(object sender, KeyEventArgs e)
 		{
+			if (e.KeyCode == Keys.D || e.KeyCode == Keys.Right) 
+			{
+				hero.RightDir();
+			}
 			
+			if (e.KeyCode == Keys.A || e.KeyCode == Keys.Up) 
+			{
+				hero.LeftDir();
+			}
+			
+			if (e.KeyCode == Keys.W || e.KeyCode == Keys.Left) 
+			{
+				hero.TopDir();
+			}
+			
+			if (e.KeyCode == Keys.S || e.KeyCode == Keys.Down) 
+			{
+				hero.DownDir();
+			}
 		}
 		
 		object ObjectSearch(string name)

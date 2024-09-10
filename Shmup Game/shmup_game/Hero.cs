@@ -8,28 +8,35 @@ namespace shmup_game
 		public Hero()
 		{
 			Load("battleship.png");
-			speed = 20;
+			speed = 7;
 			life_points = 3;
 			power = 2;
 			cooldown = 75;
-			Height = 75;
-			Width = 75;
+			htimer.Interval = 20;
+			htimer.Tick += HeroTimer;
 		}
 		
-		public void right() {
-			Left += speed + 10;
+		public Timer htimer = new Timer();
+		
+		void HeroTimer(object sender, EventArgs e)
+		{
+			
 		}
 		
-		public void left() {
-			Left -= speed + 10;
+		public void RightDir() {
+			Left += speed;
 		}
 		
-		public void down() {
-			Top += speed + 5;
+		public void LeftDir() {
+			Left -= speed;
 		}
 		
-		public void top() {
-			Top -= speed + 5;
+		public void DownDir() {
+			Top += speed;
+		}
+		
+		public void TopDir() {
+			Top -= speed;
 		}
 	}
 }

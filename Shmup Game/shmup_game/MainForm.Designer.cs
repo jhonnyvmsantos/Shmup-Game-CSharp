@@ -42,7 +42,7 @@ namespace shmup_game
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(985, 649);
+			this.ClientSize = new System.Drawing.Size(813, 683);
 			this.Name = "MainForm";
 			this.Text = "shmup_game";
 			this.Load += new System.EventHandler(this.MainFormLoad);
