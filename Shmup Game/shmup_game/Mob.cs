@@ -8,7 +8,7 @@ namespace shmup_game
 		public Mob()
 		{
 			Load("space_mob.png");
-			mtimer.Interval = 60;
+			mtimer.Interval = 40;
 			mtimer.Tick += MobTimer;
 		}
 		

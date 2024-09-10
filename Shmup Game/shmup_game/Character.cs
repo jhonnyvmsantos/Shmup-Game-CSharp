@@ -16,7 +16,7 @@ namespace shmup_game
 		
 		public int life_points = 1;
 		public int power = 1;
-		public int speed = 7;
+		public int speed = 5;
 		public int cooldown = 50;
 	}
 }

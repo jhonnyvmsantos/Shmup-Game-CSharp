@@ -18,6 +18,11 @@ namespace shmup_game
 		public Hero hero = new Hero();
 		public Mob mob = new Mob();
 		
+		static public bool[] pressedKeys = new bool[4]
+		{
+			false, false, false, false
+		};
+		
 		string[] main_btn_text = new string[]
 		{
 			"start", "----", "leave"
@@ -30,6 +35,7 @@ namespace shmup_game
 			this.BackgroundImage = new Bitmap("space.png");
 			this.KeyPreview = true;
 			this.KeyDown += MainFormKeyDown;
+			this.KeyUp += MainFormKeyUp;
 			
 			space_pic.Size = new Size(this.Width / 3, this.Height / 3);
 			space_pic.Name = "main_pic0";
@@ -79,6 +85,7 @@ namespace shmup_game
 					
 					hero.Location = new Point(this.Width / 2 - 32, this.Height - 150);
 					hero.Parent = this;
+					hero.htimer.Start();
 					
 					mob.Location = new Point(this.Width / 2 - 32, 50);
 					mob.Parent = this;
@@ -98,22 +105,45 @@ namespace shmup_game
 		{
 			if (e.KeyCode == Keys.D || e.KeyCode == Keys.Right) 
 			{
-				hero.RightDir();
+				pressedKeys[0] = true;
 			}
 			
-			if (e.KeyCode == Keys.A || e.KeyCode == Keys.Up) 
+			if (e.KeyCode == Keys.A || e.KeyCode == Keys.Left) 
 			{
-				hero.LeftDir();
+				pressedKeys[1] = true;
 			}
 			
-			if (e.KeyCode == Keys.W || e.KeyCode == Keys.Left) 
+			if (e.KeyCode == Keys.W || e.KeyCode == Keys.Up) 
 			{
-				hero.TopDir();
+				pressedKeys[2] = true;
 			}
 			
 			if (e.KeyCode == Keys.S || e.KeyCode == Keys.Down) 
 			{
-				hero.DownDir();
+				pressedKeys[3] = true;
+			}
+		}
+		
+		void MainFormKeyUp(object sender, KeyEventArgs e)
+        {
+			if (e.KeyCode == Keys.D || e.KeyCode == Keys.Right) 
+			{
+				pressedKeys[0] = false;
+			}
+			
+			if (e.KeyCode == Keys.A || e.KeyCode == Keys.Up) 
+			{
+				pressedKeys[1] = false;
+			}
+			
+			if (e.KeyCode == Keys.W || e.KeyCode == Keys.Left) 
+			{
+				pressedKeys[2] = false;
+			}
+			
+			if (e.KeyCode == Keys.S || e.KeyCode == Keys.Down) 
+			{
+				pressedKeys[3] = false;
 			}
 		}
 		
