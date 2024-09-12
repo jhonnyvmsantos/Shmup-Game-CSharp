@@ -12,7 +12,7 @@ namespace shmup_game
 			InitializeComponent();
 		}
 		
-		PictureBox space_pic = new PictureBox();
+		PictureBox spacePic = new PictureBox();
 		Random rnd = new Random();
 		
 		public Hero hero = new Hero();
@@ -37,13 +37,13 @@ namespace shmup_game
 			this.KeyDown += MainFormKeyDown;
 			this.KeyUp += MainFormKeyUp;
 			
-			space_pic.Size = new Size(this.Width / 3, this.Height / 3);
-			space_pic.Name = "main_pic0";
-			space_pic.Location = new Point(this.Width / 3, 50);
-			space_pic.BackColor = Color.Transparent;
-			space_pic.SizeMode = PictureBoxSizeMode.StretchImage;
-			space_pic.Load("battleship.png");
-			space_pic.Parent = this;
+			spacePic.Size = new Size(this.Width / 3, this.Height / 3);
+			spacePic.Name = "main_pic0";
+			spacePic.Location = new Point(this.Width / 3, 50);
+			spacePic.BackColor = Color.Transparent;
+			spacePic.SizeMode = PictureBoxSizeMode.StretchImage;
+			spacePic.Load("battleship.png");
+			spacePic.Parent = this;
 			
 			for (int i = 0; i < 3; i++)
 			{
@@ -85,7 +85,7 @@ namespace shmup_game
 					
 					hero.Location = new Point(this.Width / 2 - 32, this.Height - 150);
 					hero.Parent = this;
-					hero.htimer.Start();
+					hero.hTimer.Start();
 					
 					mob.Location = new Point(this.Width / 2 - 32, 50);
 					mob.Parent = this;
@@ -126,6 +126,11 @@ namespace shmup_game
 		
 		void MainFormKeyUp(object sender, KeyEventArgs e)
         {
+			if (e.KeyCode == Keys.Space)
+			{
+				hero.ComumShoot();
+			}
+			
 			if (e.KeyCode == Keys.D || e.KeyCode == Keys.Right) 
 			{
 				pressedKeys[0] = false;

@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Character.cs" />
     <Compile Include="Hero.cs" />
+    <Compile Include="Laser.cs" />
     <Compile Include="MainForm.cs" />
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>

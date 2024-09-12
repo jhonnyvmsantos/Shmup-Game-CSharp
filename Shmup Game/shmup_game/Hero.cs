@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace shmup_game
 {
@@ -12,11 +13,11 @@ namespace shmup_game
 			life_points = 3;
 			power = 2;
 			cooldown = 75;
-			htimer.Interval = 20;
-			htimer.Tick += HeroTimer;
+			hTimer.Interval = 20;
+			hTimer.Tick += HeroTimer;
 		}
 		
-		public Timer htimer = new Timer();
+		public Timer hTimer = new Timer();
 		
 		void HeroTimer(object sender, EventArgs e)
 		{
@@ -41,20 +42,34 @@ namespace shmup_game
 			}
 		}
 		
-		public void RightDir() {
+		public void RightDir() 
+		{
 			Left += speed;
 		}
 		
-		public void LeftDir() {
+		public void LeftDir() 
+		{
 			Left -= speed;
 		}
 		
-		public void UpDir() {
+		public void UpDir()
+		{
 			Top -= speed;
 		}
 		
-		public void DownDir() {
+		public void DownDir() 
+		{
 			Top += speed;
+		}
+		
+		public void ComumShoot()
+		{
+			Laser laser = new Laser();
+			laser.Size = new Size(40, 40);
+			laser.Location = new Point(this.Left + 5, this.Top - 50);
+			laser.Load("lasers/player/laser_comum.png");
+			laser.speed = speed; laser.player = true;
+			laser.Parent = this.Parent;
 		}
 	}
 }
