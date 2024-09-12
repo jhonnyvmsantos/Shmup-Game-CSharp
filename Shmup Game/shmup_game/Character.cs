@@ -10,13 +10,12 @@ namespace shmup_game
 		{
 			SizeMode = PictureBoxSizeMode.StretchImage;
 			BackColor = Color.Transparent;
-			Height = 50;
-			Width = 50;
+			Size = new Size(50, 50);
 		}
 		
 		public int life_points = 1;
 		public int power = 1;
-		public int speed = 5;
+		public int speed = 4;
 		public int cooldown = 50;
 	}
 }

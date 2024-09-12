@@ -9,7 +9,8 @@ namespace shmup_game
 		public Hero()
 		{
 			Load("battleship.png");
-			speed = 7;
+			Size = new Size(40, 40);
+			speed = 5;
 			life_points = 3;
 			power = 2;
 			cooldown = 75;
@@ -20,7 +21,7 @@ namespace shmup_game
 		public Timer hTimer = new Timer();
 		
 		void HeroTimer(object sender, EventArgs e)
-		{
+		{		
 			if (MainForm.pressedKeys[0] == true && this.Left <= this.Parent.Width - 100)
 			{
 				RightDir();
@@ -65,7 +66,6 @@ namespace shmup_game
 		public void ComumShoot()
 		{
 			Laser laser = new Laser();
-			laser.Size = new Size(40, 40);
 			laser.Location = new Point(this.Left + 5, this.Top - 50);
 			laser.Load("lasers/player/laser_comum.png");
 			laser.speed = speed; laser.player = true;

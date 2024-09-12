@@ -10,8 +10,7 @@ namespace shmup_game
 		{
 			SizeMode = PictureBoxSizeMode.StretchImage;
 			BackColor = Color.Transparent;
-			Height = 35;
-			Width = 35;
+			Size = new Size(35, 35);
 			lTimer.Interval = 20;
 			lTimer.Tick += LaserTimer;
 			lTimer.Start();
@@ -25,12 +24,12 @@ namespace shmup_game
 		{
 			if (player == true)
 			{
-				this.Top -= speed;
+				this.Top -= speed * 2;
 			}
 			
 			if (player == false)
 			{
-				this.Top += speed;
+				this.Top += speed * 2;
 			}
 			
 			if (this.Top <= 0 || this.Top >= this.Parent.Height)

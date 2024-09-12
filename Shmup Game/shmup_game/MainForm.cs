@@ -60,6 +60,11 @@ namespace shmup_game
 				
 				btn.TabStop = false;
 			}
+			
+			this.DoubleBuffered = true;
+   			this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+    		this.SetStyle(ControlStyles.UserPaint, true);
+    		this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
 		}
 		
 		void MainButtonClick(object sender, EventArgs e)
@@ -103,6 +108,8 @@ namespace shmup_game
 		
 		void MainFormKeyDown(object sender, KeyEventArgs e)
 		{
+			e.SuppressKeyPress = true;
+			
 			if (e.KeyCode == Keys.D || e.KeyCode == Keys.Right) 
 			{
 				pressedKeys[0] = true;

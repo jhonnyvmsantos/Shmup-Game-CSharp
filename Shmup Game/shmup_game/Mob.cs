@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace shmup_game
 {
@@ -8,7 +9,7 @@ namespace shmup_game
 		public Mob()
 		{
 			Load("space_mob.png");
-			mtimer.Interval = 40;
+			mtimer.Interval = 30;
 			mtimer.Tick += MobTimer;
 		}
 		
