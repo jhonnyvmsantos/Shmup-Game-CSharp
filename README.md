@@ -9,6 +9,12 @@ Neste jogo, o layer "pilota" uma "nave de batalha" em um ambiente espacial. Seu 
 
 **All:** C#.
 
+## FAQ
+
+#### Qual IDE é utilizado para codar/rodar os projetos?
+
+Neste repositório, a IDE utilizada é o SharpDevelop...
+
 ## 🔗 Links
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jhonnysantosvm/)
 
