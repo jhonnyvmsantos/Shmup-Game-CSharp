@@ -18,9 +18,9 @@ namespace shmup_game
 		public Hero hero = new Hero();
 		public Mob mob = new Mob();
 		
-		static public bool[] pressedKeys = new bool[4]
+		static public bool[] pressedKeys = new bool[]
 		{
-			false, false, false, false
+			false, false, false, false, false
 		};
 		
 		string[] main_btn_text = new string[]
@@ -129,15 +129,15 @@ namespace shmup_game
 			{
 				pressedKeys[3] = true;
 			}
+			
+			if (e.KeyCode == Keys.Space)
+			{
+				pressedKeys[4] = true;
+			}
 		}
 		
 		void MainFormKeyUp(object sender, KeyEventArgs e)
-        {
-			if (e.KeyCode == Keys.Space)
-			{
-				hero.ComumShoot();
-			}
-			
+        {		
 			if (e.KeyCode == Keys.D || e.KeyCode == Keys.Right) 
 			{
 				pressedKeys[0] = false;
@@ -156,6 +156,11 @@ namespace shmup_game
 			if (e.KeyCode == Keys.S || e.KeyCode == Keys.Down) 
 			{
 				pressedKeys[3] = false;
+			}
+			
+			if (e.KeyCode == Keys.Space)
+			{
+				pressedKeys[4] = false;
 			}
 		}
 		

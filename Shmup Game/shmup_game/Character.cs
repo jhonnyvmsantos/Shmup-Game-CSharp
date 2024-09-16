@@ -11,7 +11,7 @@ namespace shmup_game
 			SizeMode = PictureBoxSizeMode.StretchImage;
 			BackColor = Color.Transparent;
 			Size = new Size(50, 50);
-			cooldown = rnd.Next(40, 51);
+			cooldown = rnd.Next(60, 71);
 		}
 				
 		Random rnd = new Random();

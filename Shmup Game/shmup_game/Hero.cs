@@ -13,7 +13,8 @@ namespace shmup_game
 			speed = 5;
 			life_points = 3;
 			power = 2;
-			cooldown = 75;
+			cooldown = 40;
+			accumulator = 40;
 			hTimer.Interval = 20;
 			hTimer.Tick += HeroTimer;
 		}
@@ -40,6 +41,16 @@ namespace shmup_game
 			if (MainForm.pressedKeys[3] == true && this.Top <= this.Parent.Height - 150)
 			{
 				DownDir();
+			}
+			
+			if (MainForm.pressedKeys[4] == true && accumulator >= cooldown)
+			{
+				ComumShoot();
+				accumulator = 0;
+			}
+			else if (accumulator < cooldown)
+			{
+				accumulator++;
 			}
 		}
 		

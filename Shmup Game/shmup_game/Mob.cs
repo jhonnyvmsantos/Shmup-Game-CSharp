@@ -9,12 +9,11 @@ namespace shmup_game
 		public Mob()
 		{
 			Load("space_mob.png");
-			mtimer.Interval = 30;
+			mtimer.Interval = 20;
 			mtimer.Tick += MobTimer;
 		}
 		
 		public Timer mtimer = new Timer();
-		Random rnd = new Random();
 		bool inverted;
 		
 		void MobTimer(object sender, EventArgs e)
