@@ -14,6 +14,7 @@ namespace shmup_game
 		}
 		
 		public Timer mtimer = new Timer();
+		Random rnd = new Random();
 		bool inverted;
 		
 		void MobTimer(object sender, EventArgs e)
@@ -35,6 +36,25 @@ namespace shmup_game
 			{
 				inverted = false;
 			}
+			
+			if (accumulator >= cooldown)
+			{
+				ComumShoot();
+				accumulator = 0;
+			}
+			else
+			{
+				accumulator++;
+			}
+		}
+		
+		public void ComumShoot()
+		{
+			Laser laser = new Laser();
+			laser.Location = new Point(this.Left, this.Top + 50);
+			laser.Load("lasers/mob/laser_comum.png");
+			laser.speed = speed;
+			laser.Parent = this.Parent;
 		}
 	}
 }

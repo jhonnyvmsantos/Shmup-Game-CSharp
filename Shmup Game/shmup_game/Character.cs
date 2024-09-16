@@ -11,11 +11,14 @@ namespace shmup_game
 			SizeMode = PictureBoxSizeMode.StretchImage;
 			BackColor = Color.Transparent;
 			Size = new Size(50, 50);
+			cooldown = rnd.Next(40, 51);
 		}
+				
+		Random rnd = new Random();
 		
 		public int life_points = 1;
 		public int power = 1;
 		public int speed = 4;
-		public int cooldown = 50;
+		public int accumulator, cooldown;
 	}
 }

@@ -24,7 +24,7 @@ namespace shmup_game
 		{
 			if (player == true)
 			{
-				this.Top -= speed * 2;
+				this.Top -= speed * 3;
 			}
 			
 			if (player == false)
