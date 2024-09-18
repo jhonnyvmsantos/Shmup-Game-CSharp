@@ -17,6 +17,7 @@ namespace shmup_game
 		
 		public Hero hero = new Hero();
 		public Mob mob = new Mob();
+		static public ListBox listPower = new ListBox();
 		
 		static public bool[] pressedKeys = new bool[]
 		{
@@ -94,7 +95,7 @@ namespace shmup_game
 					
 					mob.Location = new Point(this.Width / 2 - 32, 50);
 					mob.Parent = this;
-					mob.mtimer.Start();
+					mob.mTimer.Start();
 					break;
 					
 				case "----":

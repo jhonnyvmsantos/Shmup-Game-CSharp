@@ -11,7 +11,7 @@ namespace shmup_game
 			Load("battleship.png");
 			Size = new Size(40, 40);
 			speed = 5;
-			life_points = 3;
+			lifes = 3;
 			power = 2;
 			cooldown = 40;
 			accumulator = 40;
@@ -52,6 +52,12 @@ namespace shmup_game
 			{
 				accumulator++;
 			}
+			
+			if (dead == true)
+			{
+				this.hTimer.Stop();
+				this.Dispose();
+			}
 		}
 		
 		public void RightDir() 
@@ -77,9 +83,10 @@ namespace shmup_game
 		public void ComumShoot()
 		{
 			Laser laser = new Laser();
+			laser.Name = "laser"; laser.Tag = "player";
 			laser.Location = new Point(this.Left + 5, this.Top - 50);
 			laser.Load("lasers/player/laser_comum.png");
-			laser.speed = speed; laser.player = true;
+			laser.speed = speed;
 			laser.Parent = this.Parent;
 		}
 	}

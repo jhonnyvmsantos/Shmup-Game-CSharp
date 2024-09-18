@@ -14,20 +14,20 @@ namespace shmup_game
 			lTimer.Interval = 20;
 			lTimer.Tick += LaserTimer;
 			lTimer.Start();
+			MainForm.listPower.Items.Add(this);
 		}
 		
 		public int power, speed;
-		public bool player;
 		public Timer lTimer = new Timer();
 			
 		void LaserTimer(object sender, EventArgs e)
 		{
-			if (player == true)
+			if (this.Tag.ToString() == "player")
 			{
 				this.Top -= speed * 3;
-			}
+			} 
 			
-			if (player == false)
+			if (this.Tag.ToString() == "mob")
 			{
 				this.Top += speed * 2;
 			}
@@ -36,6 +36,7 @@ namespace shmup_game
 			{
 				lTimer.Stop();
 				this.Dispose();
+				MainForm.listPower.Items.Remove(this);
 			}
 		}
 	}
